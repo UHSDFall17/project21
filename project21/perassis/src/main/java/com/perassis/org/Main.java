@@ -1,4 +1,5 @@
 package com.perassis.org;
+import java.sql.*;
 import java.util.Scanner;
 
 public class Main {
@@ -22,17 +23,17 @@ public class Main {
     private static void signIn(){
 
         Scanner userInput = new Scanner(System.in);
-        User user = new User();
+
 
         System.out.print("Enter user name: ");
         String tempUser = userInput.nextLine();
-        user.setUserName(tempUser);
 
-        System.out.print("\nEnter password: ");
+        System.out.print("Enter password: ");
         String tempPassword = userInput.nextLine();
-        user.setPassword(tempPassword);
 
-        connectToDatabase();
+        User user = new User(tempUser,tempPassword);
+
+
         if(verify()==true){
             //password and user are found in the database
         }else {
@@ -40,31 +41,30 @@ public class Main {
         }
 
     }
-    private static void Register(){
+    private static void Register() {
         Scanner userInput = new Scanner(System.in);
-        User user = new User();
+
 
         System.out.print("Enter first name: ");
         String tempFirst = userInput.nextLine();
-        user.setFirstName(tempFirst);
 
-        System.out.print("\nEnter last name: ");
+
+        System.out.print("Enter last name: ");
         String tempLast = userInput.nextLine();
-        user.setLastName(tempLast);
 
-        System.out.print("\nEnter user name: ");
+
+        System.out.print("Enter user name: ");
         String tempUser = userInput.nextLine();
-        user.setUserName(tempUser);
 
-        System.out.print("\nEnter password: ");
+
+        System.out.print("Enter password: ");
         String tempPassword = userInput.nextLine();
-        user.setPassword(tempPassword);
 
-        connectToDatabase();
+        User user = new User(tempFirst, tempLast, tempUser, tempPassword);
+        String query = "INSERT INTO user (UserID,First_Name,Last_name,User_Name,Password) VALUES ('1','tempFirst','tempLast','tempUser','tempPassword')";
+        ConnectToDatabase connect = new ConnectToDatabase("jdbc:mysql://localhost:3306/anydo","root","password");
+        connect.insert(query);
 
-    }
-    private static void connectToDatabase(){
-        //establish connection with database
     }
 
     private static boolean verify(){
@@ -74,4 +74,5 @@ public class Main {
     private static void saveToDatabase(){
         //saves new user to database;
     }
+
 }
