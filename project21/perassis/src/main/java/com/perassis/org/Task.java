@@ -8,7 +8,7 @@ public class Task
     private String title;
     private Date dateTime;
     private String notes;
-    private UserCalendar userCalendar;
+    private User user;
 
     public Task(String title, Date dateTime, String notes, User user) {
         this.title = title;
