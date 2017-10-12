@@ -1,2 +1,7 @@
 language: java
 script: mvn clean compile -DskiptTests
+notifications:
+  email:
+    - gaarismendi@uh.edu
+    - rjrivera3@uh.edu
+    - ssivaraman@uh.edu
