@@ -1,16 +1,15 @@
 package com.perassis.org;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public class Task
 {
-    private int taskID;
     private String title;
-    private Date dateTime;
+    private LocalDate dateTime;
     private String notes;
     private User user;
 
-    public Task(String title, Date dateTime, String notes, User user) {
+    public Task(String title, LocalDate dateTime, String notes, User user) {
         this.title = title;
         this.dateTime = dateTime;
         this.notes = notes;
@@ -29,12 +28,12 @@ public class Task
         this.title = title;
     }
 
-    public Date getDateTime()
+    public LocalDate getDateTime()
     {
         return dateTime;
     }
 
-    public void setDateTime(Date dateTime)
+    public void setDateTime(LocalDate dateTime)
     {
         this.dateTime = dateTime;
     }
