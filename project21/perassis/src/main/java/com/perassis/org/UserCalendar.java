@@ -21,55 +21,40 @@ public class UserCalendar {
         return tasks;
     }
 
-    public ArrayList<Task> getTodaysTasks(){
+    public ArrayList<Task> getTodaysTasks(LocalDate today){
 
-        LocalDate today = LocalDate.of(2017,10,10);
+        ArrayList<Task> localTaskList = new ArrayList<>();
 
         for (Task task: tasks) {
             if(today.isEqual(task.getDateTime())){
-                System.out.println("Title: " + task.getTitle() + " Date: " +  task.getDateTime());
-                tasks.add(task);
-                return tasks;
-            } else {
-                System.out.println("You have no task scheduled for today.");
-                return null;
+                localTaskList.add(task);
             }
         }
-        return null;
+        return localTaskList;
     }
 
-    public ArrayList<Task> getTomorrowsTasks(){
+    public ArrayList<Task> getTomorrowsTasks(LocalDate tomorrow){
 
-        LocalDate tomorrow = LocalDate.of(2017,10,10).plusDays(1);
+        ArrayList<Task> localTaskList = new ArrayList<>();
 
         for (Task task: tasks) {
             if(tomorrow.isEqual(task.getDateTime())){
-                System.out.println("Title: " + task.getTitle() + " Date: " +  task.getDateTime());
-                tasks.add(task);
-                return tasks;
-            } else {
-                System.out.println("You have no task scheduled for tomorrow.");
-                return null;
+                localTaskList.add(task);
             }
         }
-        return null;
+        return localTaskList;
     }
 
-    public ArrayList<Task> getUpcomingTasks(){
+    public ArrayList<Task> getUpcomingTasks(LocalDate twoPlusDays){
 
-        LocalDate twoPlusDays = LocalDate.of(2017,10,10).plusDays(2);
+        ArrayList<Task> localTaskList = new ArrayList<>();
 
         for (Task task: tasks) {
             if(task.getDateTime().isAfter(twoPlusDays)){
-                System.out.println("Title: " + task.getTitle() + " Date: " +  task.getDateTime());
-                tasks.add(task);
-                return tasks;
-            } else {
-                System.out.println("You have no task scheduled in the near future.");
-                return null;
+                localTaskList.add(task);
             }
         }
-        return null;
+        return localTaskList;
     }
 }
 
