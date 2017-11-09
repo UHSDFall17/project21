@@ -1,22 +1,40 @@
 package com.perassis.org;
 
-import static org.junit.Assert.*;
+import org.junit.Assert;
+import org.junit.Test;
+
 
 public class UserTest {
-    @org.junit.Test
-    public void getFirstName() throws Exception {
+    @Test
+    public void createUser_useTwoParameterConstructor_ShouldReturnUserWithMatchingValues() throws Exception {
+
+        // Arrange
+        User user;
+
+        // Act
+        user = new User("Rolando", "passCode");
+
+        // Assert
+        Assert.assertEquals(user.getUserName(), "Rolando");
+        Assert.assertEquals(user.getPassword(), "passCode");
+
     }
 
-    @org.junit.Test
-    public void getLastName() throws Exception {
-    }
+    @Test
+    public void createUser_useFourParameterConstructor_ShouldReturnUserWithMatchingValues() throws Exception {
 
-    @org.junit.Test
-    public void getUserName() throws Exception {
-    }
+        // Arrange
+        User user;
 
-    @org.junit.Test
-    public void getPassword() throws Exception {
+        // Act
+        user = new User("Rolando", "Rivera","astrosFan", "passCode");
+
+        // Assert
+        Assert.assertEquals(user.getFirstName(), "Rolando");
+        Assert.assertEquals(user.getLastName(), "Rivera");
+        Assert.assertEquals(user.getUserName(), "astrosFan");
+        Assert.assertEquals(user.getPassword(), "passCode");
+
     }
 
 }

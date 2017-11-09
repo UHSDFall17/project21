@@ -36,4 +36,11 @@ public class User {
         return password;
     }
 
+    public UserCalendar getUserCalendar() {
+        return userCalendar;
+    }
+
+    public void setUserCalendar(UserCalendar userCalendar) {
+        this.userCalendar = userCalendar;
+    }
 }
