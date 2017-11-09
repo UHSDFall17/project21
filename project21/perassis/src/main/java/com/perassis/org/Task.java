@@ -57,20 +57,6 @@ public class Task
     {
         this.user = user;
     }
-
-    public void addTask(User user)
-    {
-
-    }
-
-    public void editTask()
-    {
-    }
-
-    public void deleteTask()
-    {
-
-    }
 }
 
 

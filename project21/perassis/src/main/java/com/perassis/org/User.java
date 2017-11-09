@@ -6,6 +6,7 @@ public class User {
     private String lastName;
     private String userName;
     private String password;
+    private UserCalendar userCalendar;
 
     public User(String userName, String password) {
         this.userName = userName;

@@ -14,8 +14,9 @@ public class Main {
     private static int option (){
         Scanner userInput = new Scanner(System.in);
         int option;
-        System.out.println("1. sign in");
-        System.out.println("2. Register");
+        System.out.println("Welcome to Perassis. Please select from the choices below:");
+        System.out.println("1. Sign in - existing user");
+        System.out.println("2. Register - new user");
         System.out.print("Enter 1 or 2: ");
         option = userInput.nextInt();
         return option;
