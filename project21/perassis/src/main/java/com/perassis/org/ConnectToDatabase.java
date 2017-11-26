@@ -44,4 +44,19 @@ public class ConnectToDatabase{
             System.out.println(e);
         }
     }
+
+    public String Select (String query, String field){
+        try{
+            connect();
+            PreparedStatement statement = conn.prepareStatement(query);
+            ResultSet rs = statement.executeQuery(query);
+            while (rs.next()){
+                String userPass = rs.getString(field);
+                return userPass;
+            }
+        }catch (Exception e){
+            System.out.println(e);
+        }
+        return null;
+    }
 }
