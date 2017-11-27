@@ -28,7 +28,7 @@ public class ConnectToDatabase{
         }
     }
 
-    private void dissconnect(){
+    private void disconnect(){
         try{
             conn.close();
         }catch (Exception e){
