@@ -4,23 +4,20 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String [] args) {
-        if(option()== 1){
-            signIn();
-        }else {
-            Register();
-        }
 
+        Options first = new Options();
+        int counter =first.getOption("signIN");
+                while (counter != 3){
+            if(counter == 1){
+                signIn();
+            }
+            else{
+                Register();
+            }
+            counter = first.getOption("signIN");
+        }
     }
-    private static int option (){
-        Scanner userInput = new Scanner(System.in);
-        int option;
-        System.out.println("Welcome to Perassis. Please select from the choices below:");
-        System.out.println("1. Sign in - existing user");
-        System.out.println("2. Register - new user");
-        System.out.print("Enter 1 or 2: ");
-        option = userInput.nextInt();
-        return option;
-    }
+
     private static void signIn(){
 
         Scanner userInput = new Scanner(System.in);
@@ -34,12 +31,46 @@ public class Main {
 
         User user = new User(tempUser,tempPassword);
 
+        String query = "SELECT user.Password FROM user WHERE User_Name = '"+user.getUserName()+"'";
+        ConnectToDatabase connect = new ConnectToDatabase("jdbc:mysql://localhost:3306/anydo?useSSL=false","root","password");
+        tempPassword = connect.Select(query, "Password");
 
-        if(verify()==true){
-            //password and user are found in the database
-        }else {
+        // logged in options
 
-        }
+        if(user.getPassword().equals(tempPassword)){
+
+            Options menu = new Options();
+            int counter = menu.getOption("loggedIN");
+            while (counter != 4){
+                //ADD TASK
+                if(counter == 1){
+                    Scanner useroptions = new Scanner(System.in);
+                    System.out.println("Enter due date yyyy-mm-dd: ");
+                    String tDueDate = useroptions.nextLine();
+                    System.out.println("Enter task Title: ");
+                    String tTitle = useroptions.nextLine();
+                    System.out.print("Enter details: ");
+                    String tDetails = useroptions.nextLine();
+                    query = "INSERT INTO task(Title,Notes,UserName,dueDate) VALUES ('"+tTitle+"','"+tDetails+"','"+user.getUserName()+"','"+tDueDate+"')";
+                    connect.insert(query);
+                }
+                // DELETE TASK
+                else if(counter == 2){
+                    query = "SELECT Title FROM task WHERE UserName = '"+user.getUserName()+"'";
+                    //task object??
+                    System.out.println("1--Title: " +connect.Select(query, "Title"));
+                    //display taskID--- user picks taskID---- delete task
+
+                }
+                else {
+                    //option1 ---- today
+                    //option2 ---- tomorrow
+                    //option3 ---- the rest
+                }
+                counter = menu.getOption("loggedIN");
+            }
+            }
+
 
     }
     private static void Register() {
@@ -62,18 +93,11 @@ public class Main {
         String tempPassword = userInput.nextLine();
 
         User user = new User(tempFirst, tempLast, tempUser, tempPassword);
-        String query = "INSERT INTO user (UserID,First_Name,Last_name,User_Name,Password) VALUES ('1','tempFirst','tempLast','tempUser','tempPassword')";
+        String query = "INSERT INTO user (First_Name,Last_name,User_Name,Password) VALUES ('"+tempFirst+"','"+tempLast+"','"+tempUser+"','"+tempPassword+"')";
         ConnectToDatabase connect = new ConnectToDatabase("jdbc:mysql://localhost:3306/anydo","root","password");
         connect.insert(query);
 
     }
 
-    private static boolean verify(){
-        return true;
-    }
-
-    private static void saveToDatabase(){
-        //saves new user to database;
-    }
 
 }
