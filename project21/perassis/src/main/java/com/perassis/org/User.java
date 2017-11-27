@@ -8,8 +8,6 @@ public class User {
     private String password;
     private UserCalendar userCalendar;
 
-    public User(){ }
-
     public User(String userName, String password) {
         this.userName = userName;
         this.password = password;
