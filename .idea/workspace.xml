@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="18970d20-974d-4194-8bc2-382352d6d323" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project21/perassis/src/main/java/com/perassis/org/Options.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project21/perassis/src/main/java/com/perassis/org/ConnectToDatabase.java" afterPath="$PROJECT_DIR$/project21/perassis/src/main/java/com/perassis/org/ConnectToDatabase.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -48,30 +48,48 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Options.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Options.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/project21/perassis/src/main/java/com/perassis/org/Options.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="625">
-              <caret line="25" column="26" lean-forward="false" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
+            <state relative-caret-position="750">
+              <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/project21/perassis/src/main/java/com/perassis/org/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-475">
-              <caret line="30" column="33" lean-forward="true" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
+            <state relative-caret-position="150">
+              <caret line="7" column="38" lean-forward="true" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
               <folding>
                 <element signature="method#Register#0;class#Main#0" expanded="false" />
-                <marker date="1511733304162" expanded="true" signature="1305:1355" ph="SELECT user.... user" />
-                <marker date="1511733304162" expanded="true" signature="1305:1378" ph="SELECT user.... user" />
-                <marker date="1511733304162" expanded="true" signature="4049:4105" ph="INSERT INTO task... " />
-                <marker date="1511733304162" expanded="true" signature="4049:4172" ph="INSERT INTO task... " />
-                <marker date="1511733304162" expanded="true" signature="4329:4370" ph="SELECT Title... task" />
-                <marker date="1511733304162" expanded="true" signature="4329:4393" ph="SELECT Title... task" />
+                <marker date="1511748670846" expanded="true" signature="1305:1355" ph="SELECT user.... user" />
+                <marker date="1511748670846" expanded="true" signature="1305:1378" ph="SELECT user.... user" />
+                <marker date="1511748670846" expanded="true" signature="4104:4160" ph="INSERT INTO task... " />
+                <marker date="1511748670846" expanded="true" signature="4104:4227" ph="INSERT INTO task... " />
+                <marker date="1511748670846" expanded="true" signature="4384:4425" ph="SELECT Title... task" />
+                <marker date="1511748670846" expanded="true" signature="4384:4448" ph="SELECT Title... task" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="task" pinned="false" current-in-tab="false">
+        <entry file="das://table:/6d417a5b/56274389-4c03-4c1f-a834-1da7d287a69c/anydo.task">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user" pinned="false" current-in-tab="false">
+        <entry file="das://table:/6d417a5b/56274389-4c03-4c1f-a834-1da7d287a69c/anydo.user">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
             </state>
           </provider>
         </entry>
@@ -131,8 +149,8 @@
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-1888" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="width" value="198" />
+    <option name="height" value="97" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -510,7 +528,7 @@
       <workItem from="1510931605570" duration="11682000" />
       <workItem from="1511021274421" duration="7319000" />
       <workItem from="1511236591265" duration="646000" />
-      <workItem from="1511718654776" duration="8153000" />
+      <workItem from="1511718654776" duration="10981000" />
     </task>
     <task id="LOCAL-00001" summary="database">
       <created>1507247411720</created>
@@ -540,7 +558,14 @@
       <option name="project" value="LOCAL" />
       <updated>1511029198145</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="database">
+      <created>1511733955595</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1511733955595</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -576,10 +601,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="80371000" />
+    <option name="totallyTimeSpent" value="83199000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-1888" width="1096" height="1896" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -589,13 +615,13 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32912844" sideWeight="0.50208336" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33505452" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.356856" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26759258" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30092594" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14814815" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329891" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -907,13 +933,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://table:/6d417a5b/56274389-4c03-4c1f-a834-1da7d287a69c/anydo.user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/project21/perassis/src/main/java/com/perassis/org/ConnectToDatabase.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="827">
@@ -937,27 +956,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/project21/perassis/src/main/java/com/perassis/org/Options.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="625">
-          <caret line="25" column="26" lean-forward="false" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
-          <folding />
+    <entry file="das://table:/6d417a5b/56274389-4c03-4c1f-a834-1da7d287a69c/anydo.user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/project21/perassis/src/main/java/com/perassis/org/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-475">
-          <caret line="30" column="33" lean-forward="true" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
+        <state relative-caret-position="150">
+          <caret line="7" column="38" lean-forward="true" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
           <folding>
             <element signature="method#Register#0;class#Main#0" expanded="false" />
-            <marker date="1511733304162" expanded="true" signature="1305:1355" ph="SELECT user.... user" />
-            <marker date="1511733304162" expanded="true" signature="1305:1378" ph="SELECT user.... user" />
-            <marker date="1511733304162" expanded="true" signature="4049:4105" ph="INSERT INTO task... " />
-            <marker date="1511733304162" expanded="true" signature="4049:4172" ph="INSERT INTO task... " />
-            <marker date="1511733304162" expanded="true" signature="4329:4370" ph="SELECT Title... task" />
-            <marker date="1511733304162" expanded="true" signature="4329:4393" ph="SELECT Title... task" />
+            <marker date="1511748670846" expanded="true" signature="1305:1355" ph="SELECT user.... user" />
+            <marker date="1511748670846" expanded="true" signature="1305:1378" ph="SELECT user.... user" />
+            <marker date="1511748670846" expanded="true" signature="4104:4160" ph="INSERT INTO task... " />
+            <marker date="1511748670846" expanded="true" signature="4104:4227" ph="INSERT INTO task... " />
+            <marker date="1511748670846" expanded="true" signature="4384:4425" ph="SELECT Title... task" />
+            <marker date="1511748670846" expanded="true" signature="4384:4448" ph="SELECT Title... task" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project21/perassis/src/main/java/com/perassis/org/Options.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="750">
+          <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
