@@ -1,20 +1,30 @@
 package com.perassis.org;
+import com.sun.org.apache.regexp.internal.RE;
+
 import java.sql.*;
 import java.util.Scanner;
 
 public class Main {
+
     public static void main(String [] args) {
 
-        Options first = new Options();
-        int counter =first.getOption("signIN");
-                while (counter != 3){
-            if(counter == 1){
-                signIn();
-            }
-            else{
-                Register();
-            }
-            counter = first.getOption("signIN");
+        OptionFactory optionFactory = new OptionFactory();
+        Option userOption;
+
+        userOption = optionFactory.getOption("SignIn");
+        userOption.display();
+
+        // Select main menu option
+        Scanner userInput = new Scanner(System.in);
+        int userChoice = Integer.parseInt(userInput.nextLine());
+
+        if(userChoice == 1){
+            signIn();
+        } else if(userChoice == 2){
+            Register();
+        } else if(userChoice == 3){
+            Option quitOption = optionFactory.getOption("QuitApp");
+            quitOption.display();
         }
     }
 

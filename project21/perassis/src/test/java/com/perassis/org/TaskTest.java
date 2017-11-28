@@ -20,7 +20,6 @@ public class TaskTest
         //Act
         task = new Task("My first task", LocalDate.of(2017,11,12),"Don't forget", user1);
 
-
         //Assert
         Assert.assertEquals(task.getDateTime(), LocalDate.of(2017,11,12));
         Assert.assertEquals(task.getNotes(), "Don't forget");
