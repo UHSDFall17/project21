@@ -5,27 +5,25 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
 
-public class Task
+class Task
 {
     private String title;
     private String description;
     private String date;
     private int hour;
     private int minute;
-    private User user;
     private Scanner scan;
-    private String time;
 
     Task(String title, String description, String date, User user)
     {
         this.title = title;
         this.description = description;
         this.date = date;
-        this.user = user;
+        User user1 = user;
     }
 
 
-    public String getTitle()
+    String getTitle()
 
     {
         System.out.println("Enter the title of the task");
@@ -34,27 +32,26 @@ public class Task
         return title;
     }
 
-    public void setTitle(String title)
+    void setTitle(String title)
     {
         this.title = title;
     }
 
-    public String getDescription()
+    String getDescription()
 
     {
         System.out.println("Enter the Task Description");
-        String tempDescription = scan.nextLine();
-        description = tempDescription;
+        description = scan.nextLine();
         return description;
     }
 
-    public void setDescription(String description)
+    void setDescription(String description)
     {
         this.description = description;
     }
 
 
-    public String getDate()
+    String getDate()
     {
         SimpleDateFormat sdf = new SimpleDateFormat("MM-dd-yyyy");
         Scanner sc = new Scanner(System.in);
@@ -79,13 +76,13 @@ public class Task
 
     }
 
-    public void setDate()
+    void setDate()
     {
 
         this.date = date;
     }
 
-    public int getHour()
+    private int getHour()
     {
         System.out.print("Enter the Hour (0-23) ");
         hour = scan.nextInt();
@@ -97,12 +94,12 @@ public class Task
         return hour;
     }
 
-    public int hour()
+    int hour()
     {
         return hour;
     }
 
-    public int getMinute()
+    private int getMinute()
     {
         System.out.print("Enter the Minute (0-59): ");
         minute = scan.nextInt();
@@ -114,34 +111,20 @@ public class Task
         return minute;
     }
 
-    public int minute()
+    int minute()
     {
         return minute;
     }
 
-
-
-
-    public void setTime()
+    void setTime()
     {
         System.out.println("Enter the time task has to be done");
         int temp1 = getHour();
         int temp2 = getMinute();
         String time = temp1+":"+ temp2;
-        this.time=time;
     }
 
 
-
-    public User getUser()
-    {
-        return user;
-    }
-
-    public void setUser(User user)
-    {
-        this.user = user;
-    }
 }
 
 
